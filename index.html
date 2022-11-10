@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script
+  src="https://code.jquery.com/jquery-3.6.1.slim.js"
+  integrity="sha256-tXm+sa1uzsbFnbXt8GJqsgi2Tw+m4BLGDof6eUPjbtk="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <h1>AV2 DE PROGRAMAÇÃO WEB</h1>
+        <hr>
+    </header>
+    <div>
+        <h2>1. Leia o nome e as três notas do aluno, o nome da disciplina e o número da turma. Imprima os dados lidos e a média aritmética das notas (soma das notas dividida por três).</h2>
+        Nome: <input type="text" id="nomeAluno">
+        Nota AV1: <input type="text" id="AV1">
+        Nota AV2: <input type="text" id="AV2">
+        Nota AVD: <input type="text" id="AVD">
+        <button id="calculo"> CALCULAR </button>
+        Media Final: <input type="text" id="total">
+    </div>
+    
+    <script> $("#calculo").click(()=>{
+            let AV1=parseInt($("#AV1").val())
+            let AV2=parseInt($("#AV2").val())
+            let AVD=parseInt($("#AVD").val())
+            let mediaTotal=(AV1+AV2+AVD)/3
+            $("#total").val(mediaTotal)
+
+        })
+    </script>
+    <h2>2. Leia uma determinada hora, seus minutos e segundos e converta tudo para segundos. Mostre no vídeo quantos segundos correspondem à hora lida (observação: 1 hora = 60 minutos e 1 minuto = 60 segundos).</h2>
+    <div>
+        Hora: <input type="text" id="hora">
+        Minutos: <input type="text" id="min">
+        Segundos: <input type="text" id="seg">
+        <button id="calculo2"> CALCULAR </button>
+        total em segundos: <input type="text" id="total2">
+    </div>
+    <script> $("#calculo2").click(()=>{
+        let hora=parseInt($("#hora").val())
+        let min=parseInt($("#min").val())
+        let seg=parseInt($("#seg").val())
+        let minutosTotal=(hora*60) + min
+        let segundosTotal=(minutosTotal *60) + seg
+        $("#total2").val(segundosTotal)
+
+        })
+    </script>
+    <h2>3. Em uma loja existe um total mensal de vendas. Faça a leitura do nome da loja e dos totais de vendas em um ano. Imprima o nome da loja e os totais de vendas semestrais.</h2>
+    <div>
+        Nome da Loja: <input type="text" id="loja">
+        Vendas anuais: <input type="text" id="vendaAnual">
+        <button id="calculo3"> CALCULAR </button>
+        Vendas semestrais: <input type="text" id="total3">
+    </div>
+    <script> $("#calculo3").click(()=>{
+        let loja=parseInt($("#loja").val())
+        let vendaAnual=parseInt($("#vendaAnual").val())
+        let vendaSemestral=vendaAnual/2
+        $("#total3").val(vendaSemestral)
+
+        })
+    </script>
+    <h2>4. Leia os dados de uma conta-corrente: o nome do correntista, o nome do banco, o número da conta, o valor total de cheques a debitar, o total de dinheiro e cheques a creditar, o limite de crédito e o saldo atual. Imprima o nome do correntista, o nome do banco, o número da conta e o saldo disponível (saldo disponível = (saldo atual + valor do crédito + limite) -valor do débito).</h2>
+    <div>
+        Nome: <input type="text" id="nomeCorrentista">
+        Banco: <input type="text" id="nomeBanco">
+        Nº Conta: <input type="text" id="NumConta">
+        cheques a debitar: <input type="text" id="chequesD">
+        cheques a creditar: <input type="text" id="chequesC">
+        total dinheiro: <input type="text"id="totalDinheiro">
+
+        <button id="calculo4"> CALCULAR </button>
+        Nome: <input type="text" id="nome4">
+        Banco: <input type="text" id="banco4">
+        Nº Conta: <input type="text" id="numConta4">]
+        Saldo disponível: <input type="text" id="saldoDisp">
+
+    </div>
+    <script> $("#calculo4").click(()=>{
+        let nome4=($("#nomeCorrentista").val())
+        let banco4=($("#nomeBanco").val())
+        let numConta=($("#NumConta").val())
+        let chequesD=parseInt($("#chequesD").val())
+        let chequesC=parseInt($("#chequesC").val())
+        let saldoDisp=(totalDinheiro + chequesC) - chequesD
+
+        $("#nome4").val(nome4)
+        $("#banco4").val(nomeBanco)
+        $("#NumConta").val(numConta)
+        $("#saldoDisp").val(saldoDisp)
+        })
+    </script>
+
+    
+</body>
+</html>
